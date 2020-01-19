@@ -1,5 +1,12 @@
 const chalk = require('chalk');
 const validator = require('validator');
 
-console.log(validator.isEmail('mail@mail.com'));
-console.log(chalk.green('Green text?'));
+const command = process.argv[2];
+
+console.log(process.argv);
+
+if(command === 'add') {
+    console.log('adding note...');
+} else if(command === 'remove') {
+    console.log('removing note...')
+}
